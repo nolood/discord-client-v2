@@ -2,7 +2,7 @@ import { type FC, Suspense } from "react";
 import "./styles/globals.css";
 import { Providers } from "~/app/providers";
 import { RouterProvider } from "react-router-dom";
-import { router } from "~/shared/router/router";
+import { router } from "~/app/router/router";
 
 const App: FC = () => {
   return (

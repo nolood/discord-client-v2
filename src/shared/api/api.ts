@@ -1,6 +1,6 @@
 import axios from "axios";
 import { LocalStorage } from "~/shared/lib/storage";
-import { paths } from "~/shared/router/paths.ts";
+import { paths } from "~/shared/constants/paths.ts";
 
 const api = axios.create({
   baseURL: "http://localhost:5000",

@@ -29,7 +29,10 @@ const RegisterForm: FC = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-[25px]"
+      >
         <FormField
           control={form.control}
           name={"username"}
@@ -37,12 +40,12 @@ const RegisterForm: FC = () => {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="Username" {...field} />
+                <Input placeholder="Enter your username" {...field} />
               </FormControl>
+              <FormMessage />
               <FormDescription>
                 This is your login and display name
               </FormDescription>
-              <FormMessage />
             </FormItem>
           )}
         />
@@ -59,8 +62,8 @@ const RegisterForm: FC = () => {
                   {...field}
                 />
               </FormControl>
-              <FormDescription>This is your password</FormDescription>
               <FormMessage />
+              <FormDescription>This is your password</FormDescription>
             </FormItem>
           )}
         />
@@ -77,8 +80,8 @@ const RegisterForm: FC = () => {
                   {...field}
                 />
               </FormControl>
-              <FormDescription>Its a repeat of your password</FormDescription>
               <FormMessage />
+              <FormDescription>Its a repeat of your password</FormDescription>
             </FormItem>
           )}
         />
