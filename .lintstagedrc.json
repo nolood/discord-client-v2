@@ -1,0 +1,4 @@
+{
+  "*.ts": ["prettier --write", "eslint", "yarn test --findRelatedTests --passWithNoTests"],
+  "*.tsx": ["eslint", "prettier --write"]
+}
