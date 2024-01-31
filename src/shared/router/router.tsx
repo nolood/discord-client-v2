@@ -5,19 +5,19 @@ import { paths } from "~/shared/router/paths.ts";
 
 export const router = createBrowserRouter([
   {
+    path: paths.login,
+    element: <LoginPage />,
+  },
+  {
+    path: paths.register,
+    element: <RegisterPage />,
+  },
+  {
     element: <ProtectedLayout />,
     children: [
       {
         path: paths.main,
         element: <MainPage />,
-      },
-      {
-        path: paths.login,
-        element: <LoginPage />,
-      },
-      {
-        path: paths.register,
-        element: <RegisterPage />,
       },
     ],
   },

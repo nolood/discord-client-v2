@@ -19,6 +19,7 @@ const RegisterForm: FC = () => {
     defaultValues: {
       username: "",
       password: "",
+      passwordConfirm: "",
     },
   });
 
@@ -52,9 +53,31 @@ const RegisterForm: FC = () => {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="Password" {...field} />
+                <Input
+                  placeholder="Enter your password"
+                  type="password"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>This is your password</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name={"passwordConfirm"}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Password repeat</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Repeat your password"
+                  type="password"
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription>Its a repeat of your password</FormDescription>
               <FormMessage />
             </FormItem>
           )}
