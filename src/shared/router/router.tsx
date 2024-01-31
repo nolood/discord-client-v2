@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { ProtectedLayout } from "~/shared/ui";
-import { LoginPage, MainPage } from "~/pages";
+import { LoginPage, MainPage, RegisterPage } from "~/pages";
 import { paths } from "~/shared/router/paths.ts";
 
 export const router = createBrowserRouter([
@@ -14,6 +14,10 @@ export const router = createBrowserRouter([
       {
         path: paths.login,
         element: <LoginPage />,
+      },
+      {
+        path: paths.register,
+        element: <RegisterPage />,
       },
     ],
   },

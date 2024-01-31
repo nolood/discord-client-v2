@@ -1,7 +1,12 @@
 import { type FC } from "react";
+import { RegisterForm } from "~/widgets/register-form/ui";
 
 const Register: FC = () => {
-  return <div>register</div>;
+  return (
+    <>
+      <RegisterForm />
+    </>
+  );
 };
 
 export default Register;
